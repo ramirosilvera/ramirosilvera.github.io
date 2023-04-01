@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Juego de memoria</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Juego de memoria</h1>
+    <p>Este es un juego de memoria en el que debes encontrar las parejas de cartas iguales. Haz clic en una carta para seleccionarla y luego en otra carta para ver si son iguales. Si lo son, se quedarán boca arriba. Si no lo son, volverán a darse la vuelta y deberás intentarlo de nuevo. El juego termina cuando encuentras todas las parejas.</p>
+    <div class="juego">
+      <div class="tablero">
+        <div class="carta" data-valor="1"></div>
+        <div class="carta" data-valor="2"></div>
+        <div class="carta" data-valor="3"></div>
+        <div class="carta" data-valor="4"></div>
+        <div class="carta" data-valor="5"></div>
+        <div class="carta" data-valor="6"></div>
+        <div class="carta" data-valor="1"></div>
+        <div class="carta" data-valor="2"></div>
+        <div class="carta" data-valor="3"></div>
+        <div class="carta" data-valor="4"></div>
+        <div class="carta" data-valor="5"></div>
+        <div class="carta" data-valor="6"></div>
+      </div>
+      <div class="puntaje">Intentos Fallidos: <span id="ntentos-fallidos">0</span></div>
+      <button class="boton-reinicio" onclick="reiniciarJuego()">Reiniciar Juego</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
