@@ -1,6 +1,6 @@
 // Lista de páginas web disponibles para cambiar
 var paginas = [
-    "juegos/memoria/memoria.html",
+    "juegos/cartas/cartas.html",
     "juegos/numeros/numeros.html",
 
   ];
