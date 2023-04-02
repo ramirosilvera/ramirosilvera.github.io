@@ -1,127 +1,96 @@
-/* Estilos generales */
-
+/* Fuente y tamaño para todo el documento */
 body {
-	background-color: #f1f1f1;
-	font-family: Arial, sans-serif;
-	color: #333;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background-color: #FFC107;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Encabezado */
+h1 {
+  font-size: 48px;
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+/* Párrafos */
+p {
+  text-align: justify;
+  margin: 20px 0;
+}
+
+/* Botón */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 24px;
+  padding: 12px 20px;
+  margin: 20px 0;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+/* Botón hover */
+button:hover {
+  background-color: #3e8e41;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* iFrame */
+iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Enlace para donación */
+a {
+  color: #4CAF50;
+  font-size: 24px;
+  text-decoration: none;
+  border-bottom: 2px solid #4CAF50;
+  margin-top: 20px;
+  padding-bottom: 5px;
+}
+
+/* Enlace para donación hover */
+a:hover {
+  color: #3e8e41;
+  border-bottom-color: #3e8e41;
+}
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Animación para el botón */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
-  
-  .container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 20px;
+  50% {
+    transform: scale(1.1);
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
+  100% {
+    transform: scale(1);
   }
-  
-  /* Estilos para el tablero */
-  
-  .tablero {
-	display: flex;
-	flex-wrap: wrap;
-	width: 600px;
-	margin: 0 auto;
-  }
-  
-  .carta {
-	width: 100px;
-	height: 100px;
-	margin: 10px;
-	background-color: #444;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: transform 0.3s, background-color 0.3s;
-	transform-style: preserve-3d;
-	transform: perspective(1000px) rotateY(0deg);
-  }
-  
-  .carta.seleccionada {
-	background-color: #f00;
-  }
-  
-  .carta.encontrada {
-	background-color: #0f0;
-	cursor: default;
-  }
-  
-  /* Estilos para el puntaje y botón de reinicio */
-  
-  .puntaje {
-	margin-top: 20px;
-	text-align: center;
-  }
-  
-  .boton-reinicio {
-	margin-top: 20px;
-	padding: 10px 20px;
-	background-color: #f00;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background-color 0.3s;
-	display: block;
-	margin: 0 auto;
-  }
-  
-  .boton-reinicio:hover {
-	background-color: #c00;
-  }
-  
-  /* Colores de las cartas */
-  
-  .carta[data-valor="1"] {
-	background-color: #FFC312;
-  }
-  .carta[data-valor="2"] {
-	background-color: #C4E538;
-  }
-  .carta[data-valor="3"] {
-	background-color: #12CBC4;
-  }
-  .carta[data-valor="4"] {
-	background-color: #FDA7DF;
-  }
-  .carta[data-valor="5"] {
-	background-color: #ED4C67;
-  }
-  .carta[data-valor="6"] {
-	background-color: #8B78E6;
-  }
-  
-  /* Cartas encontradas */
-  
-  .carta.encontrada {
-	background-color: #0f0;
-  }
-  
-  /* Cartas no seleccionadas */
-  
-  .carta:not(.seleccionada):not(.encontrada) {
-	background-color: #333;
-  }
-  
-  /* Estilos para el footer */
-  
-  footer {
-	margin-top: 50px;
-	text-align: center;
-  }
-  
-  footer p {
-	font-size: 12px;
-	color: #999;
-	margin: 0;
-  }
-  
-  footer a {
-	color: #666;
-	text-decoration: none;
-  }
-  
-  footer a:hover {
-	color: #333;
-  }
-  
+}
+
+/* Agregar la animación al botón */
+button {
+  animation: pulse 2s ease-in-out infinite;
+}

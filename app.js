@@ -1,73 +1,27 @@
-const cartas = document.querySelectorAll('.carta');
-let cartaSeleccionada = null;
-let intentosFallidos = 0;
+// Lista de páginas web disponibles para cambiar
+var paginas = [
+    "juegos/memoria/memoria.html",
+    "juegos/numeros/numeros.html",
 
-function seleccionarCarta() {
-  if (this === cartaSeleccionada) return;
-
-  this.classList.add('seleccionada');
-
-  if (!cartaSeleccionada) {
-    cartaSeleccionada = this;
-    return;
+  ];
+  
+  // Función para cambiar aleatoriamente la página web del iframe
+  function cambiarPagina() {
+    var iframe = document.getElementById("juego-iframe");
+    var paginaAleatoria = paginas[Math.floor(Math.random() * paginas.length)];
+    iframe.src = paginaAleatoria;
   }
+  
+  // Asignar la función al botón
+  var boton = document.getElementById("cambiar-pagina");
+  boton.addEventListener("click", cambiarPagina);
 
-  if (this.dataset.valor === cartaSeleccionada.dataset.valor) {
-    cartaSeleccionada = null;
-    if (document.querySelectorAll('.acertada').length === 10) {
-      setTimeout(() => {
-        alert('¡Ganaste!');
-        reiniciarJuego();
-      }, 500);
-    }
-    this.classList.add('acertada');
-    cartaSeleccionada.classList.add('acertada');
-  } else {
-    intentosFallidos++;
-    actualizarIntentosFallidos();
-    setTimeout(() => {
-      this.classList.remove('seleccionada');
-      cartaSeleccionada.classList.remove('seleccionada');
-      cartaSeleccionada = null;
-    }, 500);
-  }
+  // Función para iniciar la página con un juego distinto
+function iniciarConJuegoDistinto() {
+  var iframe = document.getElementById("juego-iframe");
+  var paginaAleatoria = paginas[Math.floor(Math.random() * paginas.length)];
+  iframe.src = paginaAleatoria;
 }
 
-function reiniciarJuego() {
-    intentosFallidos = 0;
-    actualizarIntentosFallidos();
-    cartaSeleccionada = null;
-    cartas.forEach(carta => {
-      carta.classList.remove('seleccionada');
-      carta.classList.remove('acertada');
-    });
-    setTimeout(() => {
-      barajarCartas();
-    }, 500);
-  }
-
-function actualizarIntentosFallidos() {
-  document.getElementById('intentos-fallidos').textContent = intentosFallidos;
-}
-
-function barajarCartas() {
-  cartas.forEach(carta => {
-    let posicionAleatoria = Math.floor(Math.random() * 20);
-    carta.style.order = posicionAleatoria;
-  });
-}
-
-barajarCartas();
-
-cartas.forEach(carta => {
-  carta.addEventListener('click', seleccionarCarta);
-});
-
-function actualizarIntentosFallidos() {
-  document.getElementById('intentos-fallidos').textContent = intentosFallidos;
-}
-
-const btnReiniciar = document.getElementById('btn-reiniciar');
-btnReiniciar.addEventListener('click', () => {
-  location.reload();
-});
+// Llamar la función para iniciar con un juego distinto al cargar la página
+window.addEventListener("load", iniciarConJuegoDistinto);

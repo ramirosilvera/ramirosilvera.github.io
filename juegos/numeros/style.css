@@ -1,0 +1,84 @@
+body {
+  background-image: url('background.jpg');
+  background-size: cover;
+}
+
+#game {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  margin: 50px auto;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #6c5ce7;
+  background-color: #f1f1f1;
+  margin: 20px;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.square:hover {
+  background-color: #6c5ce7;
+}
+
+.clicked {
+  background-color: #6c5ce7;
+  color: #f1f1f1;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#controls {
+  width: 600px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#answer {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#checkButton {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6c5ce7;
+  color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#checkButton:hover {
+  background-color: #f1f1f1;
+  color: #6c5ce7;
+}
+
+#timer {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+}
+
+.gameover {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 100px;
+  color: #6c5ce7;
+}
