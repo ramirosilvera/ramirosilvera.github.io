@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Memoria de palabras de la Scaloneta</title>
+	<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Memoria de palabras de la Scaloneta</h1>
+    <p>En este juego se te mostrarán tres palabras por unos segundos. Luego, deberás escribirlas correctamente en el cuadro de texto y hacer clic en "Comprobar".</p>
+    <p>¡Pero cuidado! Solo tendrás 10 segundos para ver las palabras antes de que desaparezcan.</p>
+    <div id="game-container">
+      <h2>Palabras:</h2>
+      <ul id="word-list"></ul>
+      <button id="start-button">Iniciar Juego</button>
+      <label for="user-input">Escribe las palabras aquí:</label>
+      <input type="text" id="user-input">
+      <button id="check-button">Comprobar</button>
+      <p id="result"></p>
+      <p id="timer"></p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
