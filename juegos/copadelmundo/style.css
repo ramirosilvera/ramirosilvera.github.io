@@ -1,0 +1,147 @@
+/* Fuente */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Encabezado */
+  header {
+    text-align: center;
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  /* Título */
+  h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  /* Botón */
+  button {
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Juego */
+  #game {
+    margin-top: 50px;
+  }
+  
+  /* Pregunta */
+  #question {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Respuestas */
+  #answers {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin: 5px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #3498db;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .btn.correct {
+    background-color: #2ecc71;
+    color: #fff;
+    border-color: #2ecc71;
+  }
+  
+  .btn.incorrect {
+    background-color: #e74c3c;
+    color: #fff;
+    border-color: #e74c3c;
+  }
+  
+  /* Nivel */
+  #level {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Puntuación */
+  #score {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Tiempo */
+  #time {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Siguiente botón */
+  .hide {
+    display: none;
+  }
+  
+  #next {
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #next:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Resultados */
+  #result {
+    margin-top: 50px;
+  }
+  
+  /* Resultado final */
+  #final-result {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  

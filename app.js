@@ -3,6 +3,7 @@ var paginas = [
     "juegos/cartas/cartas.html",
     "juegos/numeros/numeros.html",
     "juegos/palabrasfutbol/palabrasfutbol.html",
+    "juegos/copadelmundo/copadelmundo.html",
   ];
   
   // Función para cambiar aleatoriamente la página web del iframe
