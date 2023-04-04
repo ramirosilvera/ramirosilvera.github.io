@@ -11,7 +11,7 @@ const startButton = document.getElementById('start-button');
 let currentWordIndex = 0;
 let currentWordList = [];
 let isShowingWords = false;
-let secondsLeft = 10;
+let secondsLeft = 3;
 let timerIntervalId;
 
 // Function to show a word in the word list
@@ -41,7 +41,7 @@ function startNextSequence() {
 // Function to start the timer
 function startTimer() {
   clearInterval(timerIntervalId);
-  secondsLeft = 10;
+  secondsLeft = 3;
   timerElement.innerText = secondsLeft + ' segundos restantes';
   timerIntervalId = setInterval(() => {
     secondsLeft--;
